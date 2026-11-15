@@ -1,0 +1,13 @@
+Практична робота №3
+Java 17+ (перевірено на OpenJDK 21).
+
+Linux/macOS:
+bash run.sh
+
+Windows PowerShell (у каталозі цієї практичної):
+New-Item -ItemType Directory -Force build | Out-Null
+$files = Get-ChildItem -Recurse -Filter *.java src | ForEach-Object { $_.FullName }
+javac -encoding UTF-8 -d build $files
+java -cp build edu.oop.library.lab3.app.Main
+
+Фактичний перевірений вивід: console_output.txt
